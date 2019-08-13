@@ -8,8 +8,8 @@ export default class App extends Component {
   render() {
     return (
       <Fragment>
-        {/* <Header />
-        <BooksContainer {...books} /> */}
+        <Header />
+         <BooksContainer {...books} />
       </Fragment>
     );
   }
