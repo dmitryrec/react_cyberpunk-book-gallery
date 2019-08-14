@@ -10,7 +10,10 @@ export default class SingleBookContainer extends Component {
     render(){
         return(
             <Fragment>
-                <div className="singleBook">{this.props.title}
+                <div className="singleBook">
+                    <img src={this.props.thumbnailUrl}/>
+                    <div>{this.props.title}</div> 
+                    <div>{this.props.author}</div>
                 </div>
             </Fragment>
         )
