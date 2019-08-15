@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import SingleBookContainer from '../SingleBookContainer/SingleBookContainer';
 import './BooksContainer.css';
 

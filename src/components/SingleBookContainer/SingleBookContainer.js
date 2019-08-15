@@ -1,30 +1,28 @@
-import React, {Component,Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import PopUpPic from '../PopUpPic/PopUpPic';
 import './SingleBookContainer.css';
 
 export default class SingleBookContainer extends Component {
-    constructor(props){
-        super(props);
-        this.state = { showPopup: false };
-    }
+    state = { showPopup: false };
 
-    togglePopUp = ()=>{
+    togglePopUp = () => {
         this.setState({
             showPopup: !this.state.showPopup
         })
     };
 
-    render(){
-        return(
+    render() {
+        const {thumbnailUrl, title, author} = this.props
+        return (
             <Fragment>
                 <div className="singleBook">
-                    <img src={this.props.thumbnailUrl} onClick={this.togglePopUp}/>
-                    <div>{this.props.title}</div> 
-                    <div>{this.props.author}</div>
+                    <img src={thumbnailUrl} onClick={this.togglePopUp} alt="thumbnail"/>
+                    <div>{title}</div>
+                    <div>{author}</div>
                 </div>
                 {this.state.showPopup ? (
-                    <PopUpPic {...this.props} closePopup={this.togglePopUp}/>
-                ): null}
+                    <PopUpPic {...this.props} closePopup={this.togglePopUp} />
+                ) : null}
             </Fragment>
         );
     }
