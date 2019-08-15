@@ -5,7 +5,7 @@ import './BooksContainer.css';
 export default function BooksContainer({data}) {
         return (
           <div id="gallery">
-            {data.map(book => <SingleBookContainer {...book} />
+            {data.map(book => <SingleBookContainer {...book} key={Math.random()}/>
             )}
           </div>
         );

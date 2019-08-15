@@ -21,7 +21,7 @@ export default class SingleBookContainer extends Component {
                     <div>{author}</div>
                 </div>
                 {this.state.showPopup ? (
-                    <PopUpPic {...this.props} closePopup={this.togglePopUp} />
+                    <PopUpPic {...this.props}  closePopup={this.togglePopUp} />
                 ) : null}
             </Fragment>
         );

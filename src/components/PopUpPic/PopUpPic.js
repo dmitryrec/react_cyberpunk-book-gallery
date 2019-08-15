@@ -1,13 +1,15 @@
 import React from 'react';
 import "./PopUpPic.css";
 
-export default function PopUpPic(props){
-  return(
-    <div class="popup">
-      <h2>{props.title}</h2>
-      <img src={props.originalUrl} alt="cover"/>
-      <div>{props.description}</div>
-      <span onClick={props.closePopup}></span>
+export default function PopUpPic({ title, originalUrl, description, closePopup }) {
+  return (
+    <div className="popup">
+      <div className="popup_inner">
+        <h2>{title}</h2>
+        <img src={originalUrl} alt="cover" id="image" />
+        <div>{description}</div>
+        <span className="close" onClick={closePopup}>ЗАКРЫТЬ</span>
+      </div>
     </div>
   )
 }
