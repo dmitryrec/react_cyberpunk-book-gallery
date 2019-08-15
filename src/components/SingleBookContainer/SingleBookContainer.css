@@ -8,4 +8,5 @@
     padding: 10px;
     min-height: 150px;
     flex-basis: 20%;
+    cursor: pointer;
 }
