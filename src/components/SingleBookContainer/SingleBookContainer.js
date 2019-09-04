@@ -6,9 +6,9 @@ export default class SingleBookContainer extends Component {
     state = { showPopup: false };
 
     togglePopUp = () => {
-        this.setState({
-            showPopup: !this.state.showPopup
-        })
+        this.setState(({showPopup})=>({
+            showPopup: !showPopup
+        }))
     };
 
     render() {
