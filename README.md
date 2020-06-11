@@ -1,1 +1,1 @@
-Small React application
+
